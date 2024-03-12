@@ -65,3 +65,26 @@ editor.display_text() # Output: Current Text: Hell!
 editor.undo()
 editor.display_text() # Output: Current Text: Hell
 print()
+
+# Edge Case 1: delete characters until theres nothing left to delete
+editor.delete_last_character()
+editor.delete_last_character()
+editor.delete_last_character()
+editor.delete_last_character()
+editor.delete_last_character()
+editor.display_text() # Current Text: 
+print()
+
+# Edge Case 2: Undos every operation so far until there is nothing left to undo 
+editor.undo()
+editor.undo()
+editor.undo()
+editor.undo()
+editor.undo()
+editor.undo()
+editor.undo()
+editor.undo()
+editor.undo()
+editor.undo()
+editor.display_text() # Current Text: 
+print()
